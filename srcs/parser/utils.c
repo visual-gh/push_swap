@@ -40,11 +40,14 @@ int	is_valid_int(char *str)
 		i++;
 	if (!str[i])
 		return (0);
-	while (str[i++])
+	while (str[i])
+	{
 		if (str[i] < '0' || str[i] > '9')
 			return (0);
+		i++;
+	}
 	nbr = ft_atol(str);
-	if (nbr < -2147483648 || num > 2147483647)
+	if (nbr < -2147483648 || nbr > 2147483647)
 		return (0);
 	return (1);
 }
