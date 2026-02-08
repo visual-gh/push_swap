@@ -53,5 +53,5 @@ void	rr(t_stack **stack_a, t_stack **stack_b, int print)
 	rotate(stack_a);
 	rotate(stack_b);
 	if (print)
-		write(1, "rr\n", 1);
+		write(1, "rr\n", 3);
 }

@@ -43,5 +43,5 @@ void	pb(t_stack **stack_a, t_stack **stack_b, int print)
 {
 	push(stack_b, stack_a);
 	if (print)
-		write(1, "pb\n", 1);
+		write(1, "pb\n", 3);
 }
