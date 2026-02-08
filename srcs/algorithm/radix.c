@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 16:49:53 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 17:30:21 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/08 21:46:11 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	sort_bit(t_stack **stack_a, t_stack **stack_b, int bit, int size)
 	i = 0;
 	while (i < size)
 	{
-		if ((((*stack_a)->i >> bit) & 1) == 0)
+		if ((((*stack_a)->index >> bit) & 1) == 0)
 			pb(stack_a, stack_b, 1);
 		else
 			ra(stack_a, 1);
