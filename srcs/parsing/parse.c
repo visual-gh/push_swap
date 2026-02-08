@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 20:33:18 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 02:19:27 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/08 16:39:13 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,15 @@ int	parse_args(char **av, t_stack **stack_a)
 	while (av[i])
 	{
 		if (ft_strchr(av[i], ' '))
+		{
 			if (parse_string(stack_a, av[i]))
 				return (1);
+		}
 		else
+		{
 			if (add_number(stack_a, av[i]))
 				return (1);
+		}
 		i++;
 	}
 	if (has_duplicates(*stack_a))
