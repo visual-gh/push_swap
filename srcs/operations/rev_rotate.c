@@ -23,19 +23,19 @@
 static void	rev_rotate(t_stack **stack)
 {
 	t_stack	*last;
-	t_stack	*second_last;
+	t_stack	*prev;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	last = *stack;
-	second_last = NULL;
+	prev = NULL;
 	while (last->next)
 	{
-		second_last = last;
+		prev = last;
 		last = last->next;
 	}
 	last->next = *stack;
-	second_last->next = NULL;
+	prev->next = NULL;
 	*stack = last;
 }
 

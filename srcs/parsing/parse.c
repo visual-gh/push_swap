@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 20:33:18 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/06 12:57:14 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/08 02:19:27 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,22 @@ static int	add_number(t_stack **stack, char *nbr_str)
 ** Example: "./push_swap "4 67 3 87 23""
 */
 
-static int	parse_quoted_args(t_stack **stack, char *arg)
+static int	parse_string(t_stack **stack, char *arg)
 {
-	char	**str;
+	char	**split;
 	int		i;
 
-	str = ft_split(arg, ' ');
-	if (!str)
+	split = ft_split(arg, ' ');
+	if (!split)
 		return (1);
 	i = 0;
-	while (str[i])
+	while (split[i])
 	{
-		if (add_number(stack, str[i]))
-			return (free(str), 1);
+		if (add_number(stack, split[i]))
+			return (free(split), 1);
 		i++;
 	}
-	return (free(str), 0);
+	return (free(split), 0);
 }
 
 /*
@@ -72,15 +72,11 @@ int	parse_args(char **av, t_stack **stack_a)
 	while (av[i])
 	{
 		if (ft_strchr(av[i], ' '))
-		{
-			if (parse_quoted_args(stack_a, av[i]))
+			if (parse_string(stack_a, av[i]))
 				return (1);
-		}
 		else
-		{
 			if (add_number(stack_a, av[i]))
 				return (1);
-		}
 		i++;
 	}
 	if (has_duplicates(*stack_a))
