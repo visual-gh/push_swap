@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 13:10:00 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/07 16:14:59 by Visual           ###   ########.fr       */
+/*   Created: 2026/02/08 17:18:35 by Visual            #+#    #+#             */
+/*   Updated: 2026/02/08 17:42:54 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_stack	*stack_new(int value)
 	new->value = value;
 	new->index = -1;
 	new->next = NULL;
-	return (new);
+	return (NULL);
 }
 
 /* Adds a new node to the end of the stack */
