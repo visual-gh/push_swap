@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 16:57:03 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 17:09:41 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/08 21:56:05 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,5 @@ void	sort_five(t_stack **stack_a, t_stack **stack_b)
 		push_min(stack_a, stack_b);
 	sort_three(stack_a);
 	while (*stack_b)
-		pb(stack_a, stack_b, 1);
+		pa(stack_a, stack_b, 1);
 }
