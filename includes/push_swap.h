@@ -1,0 +1,80 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/03 16:56:30 by Visual            #+#    #+#             */
+/*   Updated: 2026/02/08 01:55:33 by Visual           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
+
+/* Stack Structure */
+
+typedef struct s_stack
+{
+	int				value;
+	int				index;
+	struct s_stack	*next;
+}	t_stack;
+
+/* Parsing & Validation */
+
+long		ft_atol(const char *str);
+void		free_split(char **split);
+int			has_duplicates(t_stack *stack);
+int			is_valid_int(char *str);
+int			parse_args(char **argv, t_stack **stack_a);
+
+/* Stack Data Structure */
+
+t_stack		*stack_new(int value);
+void		stack_add_back(t_stack **stack, t_stack *new);
+int			stack_size(t_stack *stack);
+t_stack		*stack_last(t_stack *stack);
+void		stack_clear(t_stack **stack);
+
+/* Stack Operations - Swap */
+
+void		sa(t_stack **stack_a, int print);
+void		sb(t_stack **stack_b, int print);
+void		ss(t_stack **stack_a, t_stack **stack_b, int print);
+
+/* Stack Operations - Push */
+
+void		pa(t_stack **stack_a, t_stack **stack_b, int print);
+void		pb(t_stack **stack_a, t_stack **stack_b, int print);
+
+/* Stack Operations - Rotate */
+
+void		ra(t_stack **stack_a, int print);
+void		rb(t_stack **stack_b, int print);
+void		rr(t_stack **stack_a, t_stack **stack_b, int print);
+
+/* Stack Operations - Reverse Rotate */
+
+void		rra(t_stack **stack_a, int print);
+void		rrb(t_stack **stack_b, int print);
+void		rrr(t_stack **stack_a, t_stack **stack_b, int print);
+
+/* Algorithm */
+
+void		index_stack(t_stack **stack);
+int			is_sorted(t_stack *stack);
+void		radix_sort(t_stack **stack_a, t_stack **stack_b);
+void		sort_five(t_stack **stack_a, t_stack **stack_b);
+void		sort_three(t_stack **stack_a);
+
+/* Error Handling */
+
+void		error_exit(t_stack **stack_a, t_stack **stack_b);
+
+#endif
