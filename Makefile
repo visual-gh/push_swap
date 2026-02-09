@@ -6,7 +6,7 @@
 #    By: Visual <github.com/visual-gh>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/02 18:09:10 by Visual            #+#    #+#              #
-#    Updated: 2026/02/09 04:02:52 by Visual           ###   ########.fr        #
+#    Updated: 2026/02/09 19:04:57 by Visual           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ SRCS	= srcs/main.c \
 		  srcs/operations/swap.c \
 		  srcs/operations/rotate.c \
 		  srcs/operations/rev_rotate.c \
-		  srcs/algorithm/radix.c \
-		  srcs/algorithm/small.c
+		  srcs/algorithms/radix.c \
+		  srcs/algorithms/small.c
 
 OBJS	= $(SRCS:.c=.o)
 
