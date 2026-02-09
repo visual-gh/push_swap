@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:56:34 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 01:48:40 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:03:38 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,4 @@ int	has_duplicates(t_stack *stack)
 		current = current->next;
 	}
 	return (0);
-}
-
-void	free_split(char **split)
-{
-	int	i;
-
-	if (!split)
-		return ;
-	i = 0;
-	while (split[i])
-		free(split[i++]);
-	free(split);
 }

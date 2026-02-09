@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:56:30 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 01:38:35 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:06:48 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef struct s_stack
 /* Parsing & Validation */
 
 long		ft_atol(const char *str);
-void		free_split(char **split);
 int			has_duplicates(t_stack *stack);
 int			is_valid_int(char *str);
 int			parse_args(char **argv, t_stack **stack_a);

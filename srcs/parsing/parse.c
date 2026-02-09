@@ -6,16 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 20:33:18 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 01:47:26 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:06:05 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-** Add a number to the stack after validation
-** Returns 0 on success, 1 on error
-*/
+/* Add a number to the stack after validation */
 
 static int	add_number(t_stack **stack, char *nbr_str)
 {
@@ -32,10 +29,21 @@ static int	add_number(t_stack **stack, char *nbr_str)
 	return (0);
 }
 
-/*
-** Parse arguments that are space-separated in a single string
-** Example: "./push_swap "4 67 3 87 23""
-*/
+/* Frees split on error */
+
+static void	free_split(char **split)
+{
+	int	i;
+
+	if (!split)
+		return ;
+	i = 0;
+	while (split[i])
+		free(split[i++]);
+	free(split);
+}
+
+/* Parse arguments that are space-separated in a single string */
 
 static int	parse_string(t_stack **stack, char *arg)
 {
@@ -55,12 +63,7 @@ static int	parse_string(t_stack **stack, char *arg)
 	return (free_split(split), 0);
 }
 
-/*
-** Main parsing function
-** Handles both:
-** - Individual args: ./push_swap 4 67 3 87 23
-** - Quoted args:     ./push_swap "4 67 3 87 23"
-*/
+/* Main parsing function */
 
 int	parse_args(char **argv, t_stack **stack_a)
 {
