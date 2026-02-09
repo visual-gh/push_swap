@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 17:13:08 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 16:37:39 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:24:37 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ static void	push(t_stack **dst, t_stack **src)
 	*dst = tmp;
 }
 
-void	pa(t_stack **stack_a, t_stack **stack_b, int print)
+void	pa(t_stack **a, t_stack **b, int print)
 {
-	push(stack_a, stack_b);
+	push(a, b);
 	if (print)
 		write(1, "pa\n", 3);
 }
 
-void	pb(t_stack **stack_a, t_stack **stack_b, int print)
+void	pb(t_stack **a, t_stack **b, int print)
 {
-	push(stack_b, stack_a);
+	push(b, a);
 	if (print)
 		write(1, "pb\n", 3);
 }

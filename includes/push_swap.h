@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:56:30 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 02:06:48 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:26:39 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_stack
 long		ft_atol(const char *str);
 int			has_duplicates(t_stack *stack);
 int			is_valid_int(char *str);
-int			parse_args(char **argv, t_stack **stack_a);
+int			parse_args(char **argv, t_stack **a);
 
 /* Stack Data Structure */
 
@@ -44,37 +44,37 @@ void		stack_clear(t_stack **stack);
 
 /* Stack Operations - Swap */
 
-void		sa(t_stack **stack_a, int print);
-void		sb(t_stack **stack_b, int print);
-void		ss(t_stack **stack_a, t_stack **stack_b, int print);
+void		sa(t_stack **a, int print);
+void		sb(t_stack **b, int print);
+void		ss(t_stack **a, t_stack **b, int print);
 
 /* Stack Operations - Push */
 
-void		pa(t_stack **stack_a, t_stack **stack_b, int print);
-void		pb(t_stack **stack_a, t_stack **stack_b, int print);
+void		pa(t_stack **a, t_stack **b, int print);
+void		pb(t_stack **a, t_stack **b, int print);
 
 /* Stack Operations - Rotate */
 
-void		ra(t_stack **stack_a, int print);
-void		rb(t_stack **stack_b, int print);
-void		rr(t_stack **stack_a, t_stack **stack_b, int print);
+void		ra(t_stack **a, int print);
+void		rb(t_stack **b, int print);
+void		rr(t_stack **a, t_stack **b, int print);
 
 /* Stack Operations - Reverse Rotate */
 
-void		rra(t_stack **stack_a, int print);
-void		rrb(t_stack **stack_b, int print);
-void		rrr(t_stack **stack_a, t_stack **stack_b, int print);
+void		rra(t_stack **a, int print);
+void		rrb(t_stack **b, int print);
+void		rrr(t_stack **a, t_stack **b, int print);
 
 /* Algorithm */
 
 void		index_stack(t_stack **stack);
 int			is_sorted(t_stack *stack);
-void		radix_sort(t_stack **stack_a, t_stack **stack_b);
-void		sort_five(t_stack **stack_a, t_stack **stack_b);
-void		sort_three(t_stack **stack_a);
+void		radix_sort(t_stack **a, t_stack **b);
+void		sort_five(t_stack **a, t_stack **b);
+void		sort_three(t_stack **a);
 
 /* Error Handling */
 
-void		error_exit(t_stack **stack_a, t_stack **stack_b);
+void		error_exit(t_stack **a, t_stack **b);
 
 #endif

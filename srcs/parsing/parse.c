@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 20:33:18 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 02:06:05 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:27:54 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static int	parse_string(t_stack **stack, char *arg)
 
 /* Main parsing function */
 
-int	parse_args(char **argv, t_stack **stack_a)
+int	parse_args(char **argv, t_stack **a)
 {
 	int	i;
 
@@ -76,17 +76,17 @@ int	parse_args(char **argv, t_stack **stack_a)
 	{
 		if (ft_strchr(argv[i], ' '))
 		{
-			if (parse_string(stack_a, argv[i]))
+			if (parse_string(a, argv[i]))
 				return (1);
 		}
 		else
 		{
-			if (add_number(stack_a, argv[i]))
+			if (add_number(a, argv[i]))
 				return (1);
 		}
 		i++;
 	}
-	if (has_duplicates(*stack_a))
+	if (has_duplicates(*a))
 		return (1);
 	return (0);
 }

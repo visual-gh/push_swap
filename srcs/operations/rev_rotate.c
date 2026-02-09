@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 17:22:41 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/04 19:50:10 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:24:43 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,24 @@ static void	rev_rotate(t_stack **stack)
 	*stack = last;
 }
 
-void	rra(t_stack **stack_a, int print)
+void	rra(t_stack **a, int print)
 {
-	rev_rotate(stack_a);
+	rev_rotate(a);
 	if (print)
 		write(1, "rra\n", 4);
 }
 
-void	rrb(t_stack **stack_b, int print)
+void	rrb(t_stack **b, int print)
 {
-	rev_rotate(stack_b);
+	rev_rotate(b);
 	if (print)
 		write(1, "rrb\n", 4);
 }
 
-void	rrr(t_stack **stack_a, t_stack **stack_b, int print)
+void	rrr(t_stack **a, t_stack **b, int print)
 {
-	rev_rotate(stack_a);
-	rev_rotate(stack_b);
+	rev_rotate(a);
+	rev_rotate(b);
 	if (print)
 		write(1, "rrr\n", 4);
 }

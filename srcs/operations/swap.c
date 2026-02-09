@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 17:03:10 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/04 19:49:58 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 02:24:50 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,24 @@ static void	swap(t_stack **stack)
 	*stack = second;
 }
 
-void	sa(t_stack **stack_a, int print)
+void	sa(t_stack **a, int print)
 {
-	swap(stack_a);
+	swap(a);
 	if (print)
 		write(1, "sa\n", 3);
 }
 
-void	sb(t_stack **stack_b, int print)
+void	sb(t_stack **b, int print)
 {
-	swap(stack_b);
+	swap(b);
 	if (print)
 		write(1, "sb\n", 3);
 }
 
-void	ss(t_stack **stack_a, t_stack **stack_b, int print)
+void	ss(t_stack **a, t_stack **b, int print)
 {
-	swap(stack_a);
-	swap(stack_b);
+	swap(a);
+	swap(b);
 	if (print)
 		write(1, "ss\n", 3);
 }
