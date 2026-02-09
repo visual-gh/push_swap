@@ -6,13 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 17:18:35 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 02:26:26 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 12:27:54 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* Creates a new stack node with the given value */
+// Creates a new stack node with the given value
 
 t_stack	*stack_new(int value)
 {
@@ -27,7 +27,7 @@ t_stack	*stack_new(int value)
 	return (new);
 }
 
-/* Adds a new node to the end of the stack */
+// Adds a new node to the end of the stack
 
 void	stack_add_back(t_stack **stack, t_stack *new)
 {
@@ -44,7 +44,7 @@ void	stack_add_back(t_stack **stack, t_stack *new)
 	last->next = new;
 }
 
-/* Returns the size of the stack */
+// Returns the size of the stack
 
 int	stack_size(t_stack *stack)
 {
@@ -59,7 +59,7 @@ int	stack_size(t_stack *stack)
 	return (size);
 }
 
-/* Clears the entire stack and frees all nodes */
+// Clears the entire stack and frees all nodes
 
 void	stack_clear(t_stack **stack)
 {
@@ -76,7 +76,7 @@ void	stack_clear(t_stack **stack)
 	*stack = NULL;
 }
 
-/* Returns the last node of the stack */
+// Returns the last node of the stack
 
 t_stack	*stack_last(t_stack *stack)
 {

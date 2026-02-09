@@ -6,13 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 20:33:18 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 02:27:54 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 12:24:40 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* Add a number to the stack after validation */
+// Add a number to the stack after validation
 
 static int	add_number(t_stack **stack, char *nbr_str)
 {
@@ -29,7 +29,7 @@ static int	add_number(t_stack **stack, char *nbr_str)
 	return (0);
 }
 
-/* Frees split on error */
+// Free split on error
 
 static void	free_split(char **split)
 {
@@ -43,7 +43,7 @@ static void	free_split(char **split)
 	free(split);
 }
 
-/* Parse arguments that are space-separated in a single string */
+// Parse arguments that are space-separated in a single string
 
 static int	parse_string(t_stack **stack, char *arg)
 {
@@ -63,7 +63,7 @@ static int	parse_string(t_stack **stack, char *arg)
 	return (free_split(split), 0);
 }
 
-/* Main parsing function */
+// Main parsing function
 
 int	parse_args(char **argv, t_stack **a)
 {
