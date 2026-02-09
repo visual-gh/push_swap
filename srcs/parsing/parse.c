@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 20:33:18 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 16:39:13 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 01:47:26 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ static int	parse_string(t_stack **stack, char *arg)
 	while (split[i])
 	{
 		if (add_number(stack, split[i]))
-			return (free(split), 1);
+			return (free_split(split), 1);
 		i++;
 	}
-	return (free(split), 0);
+	return (free_split(split), 0);
 }
 
 /*
@@ -62,23 +62,23 @@ static int	parse_string(t_stack **stack, char *arg)
 ** - Quoted args:     ./push_swap "4 67 3 87 23"
 */
 
-int	parse_args(char **av, t_stack **stack_a)
+int	parse_args(char **argv, t_stack **stack_a)
 {
 	int	i;
 
 	i = 1;
-	if (!av[1])
+	if (!argv[1])
 		return (1);
-	while (av[i])
+	while (argv[i])
 	{
-		if (ft_strchr(av[i], ' '))
+		if (ft_strchr(argv[i], ' '))
 		{
-			if (parse_string(stack_a, av[i]))
+			if (parse_string(stack_a, argv[i]))
 				return (1);
 		}
 		else
 		{
-			if (add_number(stack_a, av[i]))
+			if (add_number(stack_a, argv[i]))
 				return (1);
 		}
 		i++;
