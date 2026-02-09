@@ -6,11 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 16:57:03 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 04:02:10 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 20:20:50 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// Check if stack is already sorted in ascending order
 
 int	is_sorted(t_stack *stack)
 {
@@ -22,6 +24,8 @@ int	is_sorted(t_stack *stack)
 	}
 	return (1);
 }
+
+// Sort 3 elements using optimal moves
 
 void	sort_three(t_stack **a)
 {
@@ -39,6 +43,8 @@ void	sort_three(t_stack **a)
 	if ((*a)->value > (*a)->next->value)
 		sa(a, 1);
 }
+
+// Find position of minimum element in stack
 
 static int	min_index_pos(t_stack *stack)
 {
@@ -62,6 +68,8 @@ static int	min_index_pos(t_stack *stack)
 	return (pos);
 }
 
+// Move minimum element to top and push to stack b
+
 static void	push_min(t_stack **a, t_stack **b)
 {
 	int	pos;
@@ -81,6 +89,8 @@ static void	push_min(t_stack **a, t_stack **b)
 	}
 	pb(a, b, 1);
 }
+
+// Sort 5 elements by isolating min values then sorting remaining 3
 
 void	sort_five(t_stack **a, t_stack **b)
 {

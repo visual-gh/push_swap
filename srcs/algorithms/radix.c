@@ -6,11 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 16:49:53 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 21:46:11 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 19:27:22 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// Assign sorted position indices to each element in the stack
 
 void	index_stack(t_stack **stack)
 {
@@ -34,6 +36,8 @@ void	index_stack(t_stack **stack)
 	}
 }
 
+// Calculate number of bits needed to represent stack size
+
 static int	get_max_bits(int size)
 {
 	int	bits;
@@ -43,6 +47,8 @@ static int	get_max_bits(int size)
 		bits++;
 	return (bits);
 }
+
+// Sort elements based on a specific bit position
 
 static void	sort_bit(t_stack **a, t_stack **b, int bit, int size)
 {
@@ -60,6 +66,8 @@ static void	sort_bit(t_stack **a, t_stack **b, int bit, int size)
 	while (*b)
 		pa(a, b, 1);
 }
+
+// Main radix sort algorithm sorting bit by bit
 
 void	radix_sort(t_stack **a, t_stack **b)
 {

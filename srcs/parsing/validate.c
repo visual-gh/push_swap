@@ -6,11 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:56:34 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 12:19:20 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 19:42:51 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// Convert string to long integer
 
 long	ft_atol(const char *str)
 {
@@ -27,6 +29,8 @@ long	ft_atol(const char *str)
 		nbr = nbr * 10 + (*str++ - '0');
 	return (nbr * sign);
 }
+
+// Check if string is valid integer within INT_MIN and INT_MAX
 
 int	is_valid_int(char *str)
 {
@@ -51,6 +55,8 @@ int	is_valid_int(char *str)
 		return (0);
 	return (1);
 }
+
+// Check for duplicate values in stack
 
 int	has_duplicates(t_stack *stack)
 {
