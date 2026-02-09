@@ -2,6 +2,18 @@
 
 # push_swap
 
+## Table of Contents
+
+- [Description](#description)
+- [Instructions](#instructions)
+- [Operations](#operations)
+- [Performance](#performance)
+- [Linked Lists in push_swap](#linked-lists-in-push_swap)
+- [How Radix Sort Works](#how-radix-sort-works)
+- [Project Structure](#project-structure)
+- [Resources](#resources)
+- [AI Usage](#ai-usage)
+
 ## Description
 
 A sorting algorithm project that sorts integers on a stack using a limited set of operations, aiming for the lowest possible number of moves. Implements a Radix sort approach for large datasets and optimized algorithms for small stacks (2-5 elements).
@@ -71,32 +83,6 @@ Stacks require frequent insertion/removal at both ends. Linked lists provide O(1
 - Rotate operations (move nodes between head and tail)
 
 Arrays would require shifting elements, making these O(n) operations.
-
-### Key Operations
-
-**Swap (sa/sb):** Exchange first two nodes
-```
-Before: [1] -> [2] -> [3] -> NULL
-After:  [2] -> [1] -> [3] -> NULL
-```
-
-**Push (pa/pb):** Remove from one list's head, insert at other's head
-```
-Before: a=[2,3]  b=[1,4]
-After:  a=[1,2,3]  b=[4]
-```
-
-**Rotate (ra/rb):** Move head to tail
-```
-Before: [1] -> [2] -> [3] -> NULL
-After:  [2] -> [3] -> [1] -> NULL
-```
-
-**Reverse Rotate (rra/rrb):** Move tail to head
-```
-Before: [1] -> [2] -> [3] -> NULL
-After:  [3] -> [1] -> [2] -> NULL
-```
 
 ## How Radix Sort Works
 
