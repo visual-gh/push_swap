@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 17:43:54 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 19:50:03 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 22:06:38 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 			sa(&a, 1);
 		else if (size == 3)
 			sort_three(&a);
-		else if (size == 5)
+		else if (size <= 5)
 			sort_five(&a, &b);
 		else
 			radix_sort(&a, &b);
