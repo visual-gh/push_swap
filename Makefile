@@ -6,7 +6,7 @@
 #    By: Visual <github.com/visual-gh>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/02 18:09:10 by Visual            #+#    #+#              #
-#    Updated: 2026/02/09 03:08:57 by Visual           ###   ########.fr        #
+#    Updated: 2026/02/09 03:16:36 by Visual           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ LIBFT	= libft/libft.a
 INC		= -Iincludes -Ilibft
 
 SRCS	= srcs/main.c \
-		  srcs/error.c \
 		  srcs/stack.c \
 		  srcs/parsing/parse.c \
 		  srcs/parsing/validate.c \

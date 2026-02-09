@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:56:30 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/09 02:26:39 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 03:16:55 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,5 @@ int			is_sorted(t_stack *stack);
 void		radix_sort(t_stack **a, t_stack **b);
 void		sort_five(t_stack **a, t_stack **b);
 void		sort_three(t_stack **a);
-
-/* Error Handling */
-
-void		error_exit(t_stack **a, t_stack **b);
 
 #endif

@@ -6,11 +6,21 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 17:43:54 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 21:37:29 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 03:16:27 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	error_exit(t_stack **a, t_stack **b)
+{
+	if (a && *a)
+		stack_clear(a);
+	if (b && *b)
+		stack_clear(b);
+	write(2, "Error\n", 6);
+	exit(1);
+}
 
 int	main(int argc, char **argv)
 {
