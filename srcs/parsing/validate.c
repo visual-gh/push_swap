@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:56:34 by Visual            #+#    #+#             */
-/*   Updated: 2026/02/08 01:31:41 by Visual           ###   ########.fr       */
+/*   Updated: 2026/02/09 01:48:40 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	is_valid_int(char *str)
 		i++;
 	}
 	nbr = ft_atol(str);
-	if (nbr < -2147483648 || nbr > 2147483647)
+	if (nbr < INT_MIN || nbr > INT_MAX)
 		return (0);
 	return (1);
 }

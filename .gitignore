@@ -1,3 +1,2 @@
-Makefile.test
-test_parsing.c
-TEST_README.md
+push_swap
+*.o
