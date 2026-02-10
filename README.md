@@ -2,8 +2,6 @@
 
 # push_swap
 
-<br>
-
 ## Table of Contents
 
 - [Description](#description)
