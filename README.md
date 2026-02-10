@@ -14,9 +14,11 @@
 - [Resources](#resources)
 - [AI Usage](#ai-usage)
 
+
 ## Description
 
 A sorting algorithm project that sorts integers on a stack using a limited set of operations, aiming for the lowest possible number of moves. Implements a Radix sort approach for large datasets and optimized algorithms for small stacks (2-5 elements).
+
 
 ## Instructions
 
@@ -34,6 +36,7 @@ Run with integers as arguments:
 
 The program outputs the sequence of operations needed to sort the stack in ascending order.
 
+
 ## Operations
 
 | Operation | Description |
@@ -46,6 +49,7 @@ The program outputs the sequence of operations needed to sort the stack in ascen
 | `rra` / `rrb` | Rotate stack a/b down (last becomes first) |
 | `rrr` | `rra` and `rrb` simultaneously |
 
+
 ## Benchmark Results
 
 **Radix Sort Results:**
@@ -54,6 +58,7 @@ The program outputs the sequence of operations needed to sort the stack in ascen
 - **Small stacks (≤5):** Optimized algorithms, always under thresholds
 
 Radix provides consistent O(n·k) performance across all inputs without edge case handling.
+
 
 ## Understanding Linked Lists
 
@@ -83,6 +88,7 @@ Stacks require frequent insertion/removal at both ends. Linked lists provide O(1
 - Rotate operations (move nodes between head and tail)
 
 Arrays would require shifting elements, making these O(n) operations.
+
 
 ## Radix Sort Explained
 
@@ -177,6 +183,7 @@ Moves ≈ b × (2n)
 
 Example: 100 numbers → 7 bits × 200 operations ≈ 1400 moves (actual: ~1084)
 
+
 ## Project Structure
 
 ```
@@ -246,12 +253,14 @@ srcs/
        └─────────────────────┘
 ```
 
+
 ## Resources
 
 - [42 Cursus Gitbook - push_swap](https://42-cursus.gitbook.io/guide/rank-02/push_swap)
 - ["push_swap TUTORIAL!" (Thuggonaut)](https://youtu.be/wRvipSG4Mmk?si=tug5Ecn8vGxfpi3n)
 - [Radix Sort Visualization](https://www.cs.usfca.edu/~galles/visualization/RadixSort.html)
 - Man pages: `write`, `malloc`, `free`, `exit`
+
 
 ## AI Usage
 
