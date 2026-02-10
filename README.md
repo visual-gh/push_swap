@@ -2,7 +2,7 @@
 
 # push_swap
 
-## Table of Contents
+### Table of Contents
 
 - [Description](#description)
 - [Instructions](#instructions)
