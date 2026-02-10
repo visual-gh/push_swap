@@ -14,13 +14,13 @@
 - [Resources](#resources)
 - [AI Usage](#ai-usage)
 
-
+<br>
 
 ## Description
 
 A sorting algorithm project that sorts integers on a stack using a limited set of operations, aiming for the lowest possible number of moves. Implements a Radix sort approach for large datasets and optimized algorithms for small stacks (2-5 elements).
 
-
+<br>
 
 ## Instructions
 
@@ -38,7 +38,7 @@ Run with integers as arguments:
 
 The program outputs the sequence of operations needed to sort the stack in ascending order.
 
-
+<br>
 
 ## Operations
 
@@ -52,7 +52,7 @@ The program outputs the sequence of operations needed to sort the stack in ascen
 | `rra` / `rrb` | Rotate stack a/b down (last becomes first) |
 | `rrr` | `rra` and `rrb` simultaneously |
 
-
+<br>
 
 ## Benchmark Results
 
@@ -63,7 +63,7 @@ The program outputs the sequence of operations needed to sort the stack in ascen
 
 Radix provides consistent O(n·k) performance across all inputs without edge case handling.
 
-
+<br>
 
 ## Understanding Linked Lists
 
@@ -94,7 +94,7 @@ Stacks require frequent insertion/removal at both ends. Linked lists provide O(1
 
 Arrays would require shifting elements, making these O(n) operations.
 
-
+<br>
 
 ## Radix Sort Explained
 
@@ -189,7 +189,7 @@ Moves ≈ b × (2n)
 
 Example: 100 numbers → 7 bits × 200 operations ≈ 1400 moves (actual: ~1084)
 
-
+<br>
 
 ## Project Structure
 
@@ -260,7 +260,7 @@ srcs/
        └─────────────────────┘
 ```
 
-
+<br>
 
 ## Resources
 
@@ -269,7 +269,7 @@ srcs/
 - [Radix Sort Visualization](https://www.cs.usfca.edu/~galles/visualization/RadixSort.html)
 - Man pages: `write`, `malloc`, `free`, `exit`
 
-
+<br>
 
 ## AI Usage
 
