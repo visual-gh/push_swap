@@ -7,9 +7,9 @@
 - [Description](#description)
 - [Instructions](#instructions)
 - [Operations](#operations)
-- [Performance](#performance)
-- [Linked Lists in push_swap](#linked-lists-in-push_swap)
-- [How Radix Sort Works](#how-radix-sort-works)
+- [Benchmark Results](#benchmark-results)
+- [Understanding Linked Lists](#understanding-linked-lists)
+- [Radix Sort Explained](#radix-sort-explained)
 - [Project Structure](#project-structure)
 - [Resources](#resources)
 - [AI Usage](#ai-usage)
@@ -46,7 +46,7 @@ The program outputs the sequence of operations needed to sort the stack in ascen
 | `rra` / `rrb` | Rotate stack a/b down (last becomes first) |
 | `rrr` | `rra` and `rrb` simultaneously |
 
-## Performance
+## Benchmark Results
 
 **Radix Sort Results:**
 - **100 numbers:** ~1084 moves (3/5 grade)
@@ -55,7 +55,7 @@ The program outputs the sequence of operations needed to sort the stack in ascen
 
 Radix provides consistent O(n·k) performance across all inputs without edge case handling.
 
-## Linked Lists in push_swap
+## Understanding Linked Lists
 
 ### Structure
 
@@ -84,7 +84,7 @@ Stacks require frequent insertion/removal at both ends. Linked lists provide O(1
 
 Arrays would require shifting elements, making these O(n) operations.
 
-## How Radix Sort Works
+## Radix Sort Explained
 
 Radix sort processes numbers bit by bit, sorting based on each binary digit from least significant (rightmost) to most significant (leftmost).
 
