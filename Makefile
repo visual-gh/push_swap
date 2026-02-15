@@ -6,7 +6,7 @@
 #    By: Visual <github.com/visual-gh>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/02 18:09:10 by Visual            #+#    #+#              #
-#    Updated: 2026/02/09 19:04:57 by Visual           ###   ########.fr        #
+#    Updated: 2026/02/15 14:12:17 by Visual           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,16 +20,16 @@ RM		= rm -f
 LIBFT	= libft/libft.a
 INC		= -Iincludes -Ilibft
 
-SRCS	= srcs/main.c \
-		  srcs/stack.c \
-		  srcs/parsing/parse.c \
-		  srcs/parsing/validate.c \
-		  srcs/operations/push.c \
-		  srcs/operations/swap.c \
-		  srcs/operations/rotate.c \
-		  srcs/operations/rev_rotate.c \
-		  srcs/algorithms/radix.c \
-		  srcs/algorithms/small.c
+SRCS	= src/main.c \
+		  src/stack.c \
+		  src/parsing/parse.c \
+		  src/parsing/validate.c \
+		  src/operations/push.c \
+		  src/operations/swap.c \
+		  src/operations/rotate.c \
+		  src/operations/rev_rotate.c \
+		  src/algorithms/radix.c \
+		  src/algorithms/small.c
 
 OBJS	= $(SRCS:.c=.o)
 
